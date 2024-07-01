@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>إدارة الفئات</title>
+    <link rel="stylesheet" href="css/Manage-Categories.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="account.html">Account</a></li>
+            </ul>
+        </nav>
+        <div class="header-content">
+            <img src="images/logologin.png" alt="Logo" class="logo">
+            <h1>Welcome Back, Admin</h1>
+        </div>
+    </header>
+    <div class="container">
+        <button id="addCategoryBtn" class="btn blue">Add Category</button>
+        <table>
+            <thead>
+                <tr>
+                    <th>SN</th>
+                    <th>Category Name</th>
+                    <th>Delete</th>
+                    <th>Update</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td id="category-1">test</td>
+                    <td><button class="btn red" onclick="deleteCategory(1, this)">Delete</button></td>
+                    <td><button class="btn green update-btn" data-id="1" onclick="openUpdateModal(1)">Update</button></td>
+                </tr>
+            </thead>
+            <tbody id="categoryTableBody">
+                <!-- Rows will be dynamically filled from the backend -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Add Category Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <h2>Add New Category</h2>
+            <input type="text" id="newCategoryName" placeholder="Enter new category name">
+            <button class="btn blue" onclick="addCategory()">Save Changes</button>
+            <button class="btn" onclick="closeModal()">Close</button>
+        </div>
+    </div>
+
+    <!-- Update Category Modal -->
+    <div id="update-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeUpdateModal()">&times;</span>
+            <h2>Update Category</h2>
+            <input type="text" id="update-input" placeholder="Enter new category name">
+            <button class="btn green" onclick="saveChanges()">Save Changes</button>
+            <button class="btn" onclick="closeUpdateModal()">Close</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="js/Manage-Categories.js"></script>
+</body>
+</html>

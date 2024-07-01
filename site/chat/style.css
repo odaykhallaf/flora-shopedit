@@ -1,0 +1,123 @@
+#main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(15, 27, 83);
+    height: 100vh;
+    flex-direction: column;
+}
+
+body {
+    margin: 0;
+    color: white;
+    direction: rtl;
+}
+
+body, button, input {
+    font-family: 'Cairo', sans-serif;
+}
+
+#main-title {
+    font-size: 100px;
+    margin: 0;
+}
+
+#main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(217, 217, 217);
+    height: 200px;
+    width: 95%;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+}
+
+#word-input {
+    width: 80%;
+    height: 50px;
+    border: none;
+    border-radius: 100px;
+    padding: 0 20px;
+    font-size: 25px;
+}
+
+#submit-btn {
+    height: 50px;
+    border: none;
+    border-radius: 100px;
+    margin: 0 10px;
+    width: 160px;
+    background-color: rgb(35, 104, 252);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+#header {
+    display: flex;
+    align-items: center;
+}
+
+#logo {
+    width: 100px; /* Adjust the size as needed */
+    height: auto;
+    margin-right: 10px; /* Adjust spacing between logo and title */
+    padding-right: 200px;
+}
+
+#rest-btn{
+    height: 50px;
+    border: none;
+    border-radius: 100px;
+    margin: 0 10px;
+    width: 160px;
+    background-color: rgb(35, 104, 252);
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s; 
+}
+
+#submit-btn:hover {
+    background-color: rgb(11, 67, 188);
+}
+
+#reply-content {
+    font-size: 25px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    background-color: rgb(217, 217, 217);
+    height: 900px;
+    width: 95%;
+    padding: 15px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto;
+}
+
+.message-container {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.user-message {
+    background-color: rgb(173, 216, 230);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    width: fit-content;
+}
+
+.bot-reply {
+    background-color: rgb(240, 240, 240);
+    padding: 10px;
+    border-radius: 10px;
+    width: fit-content;
+}
